@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut Events</title>
+</head>
+
+<body style=" background-color: #212121; color: white;">
+    <h1>Learning Timeouts nigga</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //SetTimeOut
+    // const sayMyName = function () {
+    //     console.log("Surya");
+    // }
+    // const changeText = function () {
+    //     document.querySelector('h1').innerText = "Text changed"
+    // }
+    // const changeMe = setTimeout(changeText, 2000); //these are not part of Core Javascript they are provided by Browser
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout(changeMe);
+    //     console.log("STOPPED");
+    // })
+
+    //SetInterval
+    const sayHi = function () {
+        console.log("Surya", Date.now());
+    }
+    let intervalId;
+    document.querySelector('#start').addEventListener('click', function () {
+        intervalId = setInterval(sayHi, 1000);
+    });
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intervalId);
+    })
+</script>
+
+</html>
